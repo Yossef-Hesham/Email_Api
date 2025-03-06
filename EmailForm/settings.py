@@ -23,20 +23,20 @@ DEBUG = (ENVIRONMENT == 'development')
 
 # Allowed hosts (adjust or load from env as needed)
 
-# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'fitnessapp-production-cf6d.up.railway.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'emailapi-production-3a8c.up.railway.app']
 
-# CORS_ALLOWED_ORIGINS = [
-#     'https://fitnessapp-production-cf6d.up.railway.app',
-#     'http://localhost:3000',
-#     'http://127.0.0.1:9000'
-# ]
+CORS_ALLOWED_ORIGINS = [
+    'https://emailapi-production-3a8c.up.railway.app',
+    'http://localhost:3000',
+    'http://127.0.0.1:9000'
+]
 
 
-# CSRF_TRUSTED_ORIGINS = [
-#     'https://fitnessapp-production-cf6d.up.railway.app',
-#     "http://localhost:3000",
-#     "http://127.0.0.1:9000",
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    'https://emailapi-production-3a8c.up.railway.app',
+    "http://localhost:3000",
+    "http://127.0.0.1:9000",
+]
 
 
 

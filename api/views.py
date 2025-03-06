@@ -1,5 +1,6 @@
 from rest_framework import generics
 from django.core.mail import send_mail
+from django.conf import settings
 from .serializers import EmailFormSerializer
 
 class EmaiMessageCreateAPIView(generics.CreateAPIView):
@@ -9,8 +10,8 @@ class EmaiMessageCreateAPIView(generics.CreateAPIView):
         contact_message = serializer.save()
         send_mail(
         subject=contact_message.subject,
-        message=f"From: {contact_message.name}\n\n Message:\n{contact_message.text}",
-        from_email=contact_message.email,
+        message=f"From: {contact_message.name}\n\nMy email: {contact_message.email}\n\nMessage:\n{contact_message.text}",
+        from_email= settings.EMAIL_HOST_USER,
         recipient_list=["youssifhamdy381@gmail.com"],  
         fail_silently=False
 )

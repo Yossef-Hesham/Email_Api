@@ -16,7 +16,7 @@ environ.Env.read_env()
 
 # Environment variables
 ENVIRONMENT = env('ENVIRONMENT', default='development')
-SECRET_KEY = env('SECRET_KEY', default='your-default-secret-key')
+SECRET_KEY = env('SECRET_KEY', default='SECRET_KEY')
 
 # Debug setting: True only in development
 DEBUG = (ENVIRONMENT == 'development')
@@ -129,3 +129,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'elhhamzy4923@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")

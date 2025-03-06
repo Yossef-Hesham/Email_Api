@@ -13,7 +13,7 @@ class EmaiMessageCreateAPIView(generics.CreateAPIView):
         subject=contact_message.subject,
         message=f"From: {contact_message.name}\n\nMy email: {contact_message.email}\n\nMessage:\n{contact_message.text}",
         from_email= settings.EMAIL_HOST_USER,
-        recipient_list=[os.getenv('reciever_email')],  
+        recipient_list=[env('reciever_email')],  
         fail_silently=False
 )
 
